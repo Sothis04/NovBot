@@ -2,10 +2,6 @@ package fr.novlab.bot.commands.music;
 
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
-import fr.novlab.bot.managers.command.CommandContext;
-import fr.novlab.bot.managers.command.ICommand;
-import fr.novlab.bot.music.GuildMusicManager;
-import fr.novlab.bot.music.PlayerManager;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.requests.restaction.MessageAction;
 

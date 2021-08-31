@@ -2,8 +2,6 @@ package fr.novlab.bot.managers;
 
 import fr.novlab.bot.commands.music.*;
 import fr.novlab.bot.config.Config;
-import fr.novlab.bot.managers.command.CommandContext;
-import fr.novlab.bot.managers.command.ICommand;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import org.jetbrains.annotations.Nullable;
 
