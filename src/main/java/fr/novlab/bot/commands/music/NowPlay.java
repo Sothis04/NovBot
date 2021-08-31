@@ -1,5 +1,10 @@
 package fr.novlab.bot.commands.music;
 
+import fr.novlab.bot.music.GuildMusicManager;
+import fr.novlab.bot.music.PlayerManager;
+import fr.novlab.bot.config.Constant;
+import fr.novlab.bot.managers.command.CommandContext;
+import fr.novlab.bot.managers.command.ICommand;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;

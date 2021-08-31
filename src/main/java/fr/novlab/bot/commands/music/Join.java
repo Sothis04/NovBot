@@ -1,5 +1,8 @@
 package fr.novlab.bot.commands.music;
 
+import fr.novlab.bot.config.Constant;
+import fr.novlab.bot.managers.command.CommandContext;
+import fr.novlab.bot.managers.command.ICommand;
 import net.dv8tion.jda.api.entities.GuildVoiceState;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
