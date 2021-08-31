@@ -1,0 +1,2 @@
+# NovBot
+Bot Music Discord
