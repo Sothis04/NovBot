@@ -9,5 +9,8 @@
         <module name="NovBot" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="NovBot" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>

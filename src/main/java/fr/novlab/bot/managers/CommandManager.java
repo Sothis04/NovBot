@@ -1,9 +1,12 @@
 package fr.novlab.bot.managers;
 
+import fr.novlab.bot.commands.music.*;
+import fr.novlab.bot.commands.staff.SetChannel;
+import fr.novlab.bot.commands.staff.SetPrefix;
+import fr.novlab.bot.commands.staff.SetRole;
+import fr.novlab.bot.database.GuildService;
 import fr.novlab.bot.managers.command.CommandContext;
 import fr.novlab.bot.managers.command.ICommand;
-import fr.novlab.bot.commands.music.*;
-import fr.novlab.bot.config.Config;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import org.jetbrains.annotations.Nullable;
 
@@ -26,6 +29,10 @@ public class CommandManager {
         addCommand(new Queue());
         addCommand(new Loop());
         addCommand(new Leave());
+        // Staff
+        addCommand(new SetRole());
+        addCommand(new SetPrefix());
+        addCommand(new SetChannel());
     }
 
     public void addCommand(ICommand cmd) {
@@ -52,13 +59,14 @@ public class CommandManager {
 
     public void handle(GuildMessageReceivedEvent event) {
         String[] split = event.getMessage().getContentRaw()
-                .replaceFirst("(?i)" + Pattern.quote(Config.getPrefix()), "")
+                .replaceFirst("(?i)" + Pattern.quote(GuildService.getGuild(event.getGuild().getId()).getPrefix()), "")
                 .split("\\s+");
 
         String invoke = split[0].toLowerCase();
         ICommand cmd = this.getCommand(invoke);
 
         if(cmd != null) {
+
             event.getChannel().sendTyping().queue();
             List<String> args = Arrays.asList(split).subList(1, split.length);
 

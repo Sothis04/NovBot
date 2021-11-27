@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="target">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/original-NovBot-1.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/NovBot-1.0-SNAPSHOT-jar-with-dependencies.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/NovBot-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

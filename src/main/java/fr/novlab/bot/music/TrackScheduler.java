@@ -4,7 +4,6 @@ import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.event.AudioEventAdapter;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackEndReason;
-import fr.novlab.bot.utils.Utils;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -23,15 +22,12 @@ public class TrackScheduler extends AudioEventAdapter {
     public void queue(AudioTrack track) {
         if(!this.player.startTrack(track, true)) {
             this.queue.offer(track);
-        } else {
-            Utils.Instance.setActivity(track);
         }
     }
 
     public void nextTrack() {
         AudioTrack audioTrack = queue.poll();
         this.player.startTrack(audioTrack, false);
-        Utils.Instance.setActivity(audioTrack);
     }
 
     @Override
@@ -43,8 +39,6 @@ public class TrackScheduler extends AudioEventAdapter {
             }
 
             nextTrack();
-        } else {
-            Utils.Instance.resetActivity();
         }
     }
 }
