@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20ca5fa9-52f3-42e1-8a8e-936b9bb3412a" name="Changes" comment="Update NovLab Staff Command">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_dv8tion_JDA_4_4_0_350.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/manager/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/manager/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/playlist/Add.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/playlist/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/playlist/Remove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/utils/Help.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/utils/Shutdown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/utils/Suggestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/config/Perms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/database/DocumentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/database/PlaylistData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/database/PlaylistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_dv8tion_JDA_4_3_0_310.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NovBot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NovBot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/NovLab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/NovLab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/console/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/console/SetActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Join.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Join.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Leave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Leave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Loop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Loop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/NowPlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/NowPlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Play.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Skip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Skip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Stop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/music/Stop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/staff/SetChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/staff/SetChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/staff/SetPrefix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/staff/SetRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/staff/SetRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/staff/SetStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/commands/staff/SetStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/database/GuildData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/database/GuildData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/database/GuildService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/database/GuildService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/managers/CommandManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/managers/command/CommandContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/managers/command/ICommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/managers/command/ICommandContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/music/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/music/PlayerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/music/TrackScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/novlab/bot/music/TrackScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NovBot-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/NovBot-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/NovBot-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/NovBot-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/NovLab.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/NovLab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Join.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Join.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Leave.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Leave.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Loop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Loop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/NowPlay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/NowPlay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Play.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Play.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Queue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Skip.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Skip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Stop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/commands/music/Stop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/novlab/bot/config/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/managers/CommandManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/managers/command/CommandContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/managers/command/ICommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/novlab/bot/managers/command/ICommandContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-NovBot-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-NovBot-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="20uaYf5UNxiVUzowfcGIdF5POVg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="NovLab" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.novlab.bot.NovLab" />
+      <module name="NovBot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.novlab.bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NovLab" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20ca5fa9-52f3-42e1-8a8e-936b9bb3412a" name="Changes" comment="" />
+      <created>1636896976128</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636896976128</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Update NovLab Staff Command">
+      <created>1638054739673</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638054739673</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update NovLab Staff Command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update NovLab Staff Command" />
+  </component>
+</project>

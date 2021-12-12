@@ -1,57 +1,52 @@
 package fr.novlab.bot.commands.staff;
 
+import fr.novlab.bot.commands.manager.Command;
+import fr.novlab.bot.config.Perms;
 import fr.novlab.bot.database.GuildService;
-import fr.novlab.bot.managers.command.CommandContext;
-import fr.novlab.bot.managers.command.ICommand;
 import net.dv8tion.jda.api.Permission;
+import net.dv8tion.jda.api.entities.GuildChannel;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.TextChannel;
+import net.dv8tion.jda.api.events.interaction.SlashCommandEvent;
 
-public class SetChannel implements ICommand {
+import java.util.List;
+
+public class SetChannel implements Command {
 
     @Override
-    public void handle(CommandContext context) {
-        TextChannel channel = context.getChannel();
-        Member member = context.getMember();
+    public void run(List<String> args, SlashCommandEvent event) {
+        GuildChannel guildChannel = event.getOption("channel").getAsGuildChannel();
 
-        if(member.getPermissions().contains(Permission.ADMINISTRATOR)) {
+        if(guildChannel instanceof TextChannel) {
 
-            if(context.getArgs().size() > 0) {
+            GuildService.updateGuild(event.getGuild().getId(), guildData -> {
+                guildData.setChannelId(guildChannel.getId());
+            });
 
-                String arg = String.valueOf(context.getArgs());
-                int index = arg.indexOf(']');
-                String arg2 = arg.substring(1, index);
+            event.reply("Vous pouvez maintenant utiliser NovLab seulement dans le channel ``" + guildChannel.getName() + "``").queue();
 
-                if(context.getGuild().getTextChannelById(arg2) != null) {
-
-                    GuildService.updateGuild(context.getGuild().getId(), guildData -> {
-                        guildData.setChannelId(arg2);
-                    });
-
-                    TextChannel textChannel = context.getGuild().getTextChannelById(arg2);
-
-                    assert textChannel != null;
-                    channel.sendMessage("Vous pouvez maintenant utiliser NovLab seulement dans le channel ``" + textChannel.getName() + "``").queue();
-
-                } else {
-                    channel.sendMessage("Le salon textuel n'existe pas").queue();
-                }
-
-            } else {
-                channel.sendMessage("Merci de preciser l'identifiant du channel").queue();
-            }
         } else {
-            channel.sendMessage("Vous n'avez pas la permission Administrateur").queue();
+            event.reply("You need to specify a text channel");
         }
     }
 
     @Override
-    public String getName() {
+    public String getCommand() {
         return "setchannel";
     }
 
     @Override
     public String getHelp() {
         return null;
+    }
+
+    @Override
+    public List<Perms> getAllowed() {
+        return List.of(Perms.STAFF, Perms.ADMINISTRATOR);
+    }
+
+    @Override
+    public String getDescription() {
+        return "Description Coming Soon";
     }
 }

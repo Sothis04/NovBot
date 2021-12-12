@@ -14,16 +14,16 @@ public class GuildData {
     private String roleStaffId;
     @BsonProperty(value = "roleDjId")
     private String roleDjId;
-    @BsonProperty(value = "prefix")
-    private String prefix;
+    @BsonProperty(value = "invite")
+    private String invitation;
 
-    public GuildData(String guildId, String channelId, String name, String roleStaffId, String roleDjId, String prefix) {
+    public GuildData(String guildId, String channelId, String name, String roleStaffId, String roleDjId, String invitation) {
         this.guildId = guildId;
         this.channelId = channelId;
         this.name = name;
         this.roleStaffId = roleStaffId;
         this.roleDjId = roleDjId;
-        this.prefix = prefix;
+        this.invitation = invitation;
     }
 
     public GuildData() {
@@ -70,11 +70,11 @@ public class GuildData {
         this.roleDjId = roleDjId;
     }
 
-    public String getPrefix() {
-        return prefix;
+    public String getInvitation() {
+        return invitation;
     }
 
-    public void setPrefix(String prefix) {
-        this.prefix = prefix;
+    public void setInvitation(String invitation) {
+        this.invitation = invitation;
     }
 }

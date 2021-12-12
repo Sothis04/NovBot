@@ -12,7 +12,7 @@ import static com.mongodb.client.model.Filters.eq;
 
 public class GuildService {
 
-    private static final MongoCollection<GuildData> collection = NovLab.getMongoCollection();
+    private static final MongoCollection<GuildData> collection = NovLab.getMongoGuild();
 
     public static GuildData getGuild(String id) {
         return collection.find(eq("guildId", id)).first();

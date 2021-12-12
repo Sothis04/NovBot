@@ -9,6 +9,9 @@ import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.TextChannel;
+import net.dv8tion.jda.api.events.interaction.SlashCommandEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.List;
@@ -17,6 +20,7 @@ import java.util.Map;
 public class PlayerManager {
 
     private static PlayerManager INSTANCE;
+    private static final Logger logger = LoggerFactory.getLogger(PlayerManager.class);
 
     private final Map<Long, GuildMusicManager> musicManagers;
     private final AudioPlayerManager audioPlayerManager;
@@ -37,8 +41,8 @@ public class PlayerManager {
         });
     }
 
-    public void loadAndPlay(TextChannel channel, String trackURL) {
-        final GuildMusicManager musicManager = this.getMusicManager(channel.getGuild());
+    public void loadAndPlay(SlashCommandEvent event, String trackURL) {
+        final GuildMusicManager musicManager = this.getMusicManager(event.getGuild());
 
         this.audioPlayerManager.loadItemOrdered(musicManager, trackURL, new AudioLoadResultHandler() {
 
@@ -46,11 +50,15 @@ public class PlayerManager {
             public void trackLoaded(AudioTrack audioTrack) {
                 musicManager.scheduler.queue(audioTrack);
 
-                channel.sendMessage("Adding to queue: `")
+                StringBuilder msg = new StringBuilder("Adding to queue: `")
                         .append(audioTrack.getInfo().title)
                         .append("` by `")
                         .append(audioTrack.getInfo().author)
-                        .append("`").queue();
+                        .append("`");
+
+                logger.info(event.getGuild().getName() + " - Listen Music " + audioTrack.getInfo().title + " - " + audioTrack.getInfo().author);
+
+                event.reply(msg.toString()).queue();
             }
 
             @Override
@@ -59,11 +67,15 @@ public class PlayerManager {
                 if(trackURL.contains("https://youtube.com/playlist")) {
                     List<AudioTrack> tracks = playlist.getTracks();
 
-                    channel.sendMessage("Adding to queue: `")
+                    StringBuilder msg = new StringBuilder("Adding to queue: `")
                             .append(String.valueOf(tracks.size()))
                             .append("` musics from playlist `")
                             .append(playlist.getName())
-                            .append("`").queue();
+                            .append("`");
+
+                    logger.info(event.getGuild().getName() + " - Listen Music " + playlist.getName() + " - " + tracks.size());
+
+                    event.reply(msg.toString()).queue();
 
                     for (AudioTrack track : tracks) {
                         musicManager.scheduler.queue(track);
@@ -73,11 +85,13 @@ public class PlayerManager {
 
                     musicManager.scheduler.queue(audioTrack);
 
-                    channel.sendMessage("Adding to queue: `")
+                    StringBuilder msg = new StringBuilder("Adding to queue: `")
                             .append(audioTrack.getInfo().title)
                             .append("` by `")
                             .append(audioTrack.getInfo().author)
-                            .append("`").queue();
+                            .append("`");
+
+                    event.reply(msg.toString()).queue();
 
                     playlist.getTracks().clear();
                 }
